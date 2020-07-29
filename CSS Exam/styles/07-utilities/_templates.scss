@@ -1,0 +1,29 @@
+@import "../01-settings/settings-breakpoints";
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: stretch;
+    grid-gap: 5px;
+    height: 100vh;
+    @include for-phone-only {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
+
+.blackback {
+    min-width: 50px;
+    min-height: 50px;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.whiteback {
+    // background-color: n;
+    min-width: 50px;
+    min-height: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
