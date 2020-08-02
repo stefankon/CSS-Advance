@@ -4,7 +4,10 @@
 
 .o-container {
   &__header {
-    min-width: fit-content;
+    margin: 0;
+    padding: 0;
+    // min-width: 320px;
+    // width: fit-content;
     
   }
   &__main {

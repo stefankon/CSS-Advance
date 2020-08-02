@@ -1,0 +1,58 @@
+.c-main-introduction {
+    .o-page-wrapper {
+        display: inherit;
+    }
+    &__text {
+        display: flex;
+        flex-flow: row wrap;
+        margin: 0 auto;
+    }
+
+    &__video {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        justify-items: center;
+
+        margin: 16px auto;
+
+        &--desctop {
+            display: flex;
+            // min-width: 440px;
+            // min-height: 250px;
+        }
+    }
+}
+
+.c-main-info {
+    .o-page-wrapper {
+        display: inherit;
+        margin: 60px auto;
+    }
+
+    &__card {
+        border: 1px solid $blue-400;
+        &-header {
+            display: flex;
+            margin: 0 auto;
+    
+            h2 {
+                margin: 0;
+            }
+            &--logo {
+                display: flex;
+                align-self: start;
+                margin-right: 18px;
+            }
+        }
+        &-body {
+            display: flex;
+            flex-flow: row wrap;
+            margin: 0 auto;
+        }
+    }
+    
+    
+}

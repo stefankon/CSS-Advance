@@ -121,8 +121,12 @@ Sections
 Remove the margin in all browsers.
 */
 body {
+  padding: 0;
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
 }
 
 /**
@@ -331,9 +335,8 @@ summary {
    #CONTAINER-OBJECT
    ========================================================================== */
 .o-container__header {
-  min-width: -webkit-fit-content;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
+  margin: 0;
+  padding: 0;
 }
 
 .o-container__main {
@@ -474,6 +477,86 @@ summary {
 .c-navigation__item a:hover {
   color: #ff9100;
   cursor: pointer;
+}
+
+.c-main-introduction .o-page-wrapper {
+  display: inherit;
+}
+
+.c-main-introduction__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin: 0 auto;
+}
+
+.c-main-introduction__video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  margin: 16px auto;
+}
+
+.c-main-introduction__video--desctop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c-main-info .o-page-wrapper {
+  display: inherit;
+  margin: 60px auto;
+}
+
+.c-main-info__card {
+  border: 1px solid #44a9f8;
+}
+
+.c-main-info__card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+}
+
+.c-main-info__card-header h2 {
+  margin: 0;
+}
+
+.c-main-info__card-header--logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: start;
+  margin-right: 18px;
+}
+
+.c-main-info__card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin: 0 auto;
 }
 
 /* 98. Pages */
