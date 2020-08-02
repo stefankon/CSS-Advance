@@ -1,22 +1,25 @@
-/* 01-settings */
-@import "./01-settings/settings-colors";
-@import "./01-settings/settings-typography";
+// ITCSS structure
+// Original post by Harry Roberts https://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528
 
+/* 01. Settings */
+@import "./01-settings/_settings.colors";
+@import "./01-settings/_settings.typography";
 
-/* 02-tools */
+/* 02. Tools */
+@import "./02-tools/_tools.shadows";
 
+/* 03. Generic */
+@import "./03-generic/_generic-normalize";
 
-/* 03-generic */
-@import "./03-generic/generic-normalize";
+/* 04. Elements */
 
-/* 04-elements */
+/* 05. Objects */
+@import "./05-objects/objects.container";
+@import "./05-objects/_objects.wrapper";
 
+/* 06. Components */
+@import "./06-components/_components.button";
+@import "./06-components/_components.navigation";
 
-/* 05-objects */
-
-
-/* 06-components */
-
-
-/* 07-utilities */
-@import "./07-utilities/templates";
+/* 98. Pages */
+@import "./98-pages/_pages.course";

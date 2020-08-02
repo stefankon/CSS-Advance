@@ -1,0 +1,18 @@
+.c-btn {
+    @include BoxShadow(3);
+    border-radius: 100px;
+    border: none;
+    outline: none;
+    padding: 10px 22px;
+    text-transform: uppercase;
+}
+
+.c-btn:hover {
+    cursor: pointer;
+    @include BoxShadow(1);
+}
+
+.c-btn--secondary {
+    background: #ff9100;
+    color: #fff;
+}

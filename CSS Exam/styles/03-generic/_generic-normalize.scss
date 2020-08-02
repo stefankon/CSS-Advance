@@ -47,6 +47,7 @@ Remove the margin in all browsers.
 
 body {
   margin: 0;
+  font-family: 'Lato', sans-serif;
 }
 
 /**
@@ -101,8 +102,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo,
-    monospace;
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */

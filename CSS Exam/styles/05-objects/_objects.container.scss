@@ -1,0 +1,20 @@
+/* ==========================================================================
+   #CONTAINER-OBJECT
+   ========================================================================== */
+
+.o-container {
+  &__header {
+    min-width: fit-content;
+    
+  }
+  &__main {
+    margin: 0;
+    padding: 0;
+    min-width: fit-content;
+    min-height: fit-content;
+  }
+  &__footer {
+    margin: 0;
+    padding: 0;
+  }
+}
