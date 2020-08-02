@@ -15,29 +15,31 @@
         justify-items: center;
         justify-content: center;
         justify-items: center;
-
+        width: fit-content;
+        background-image: url(../../assets/images/video-clip.svg);
+        content: "";
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 12px;
         margin: 16px auto;
-
-        &--desctop {
-            display: flex;
-            // min-width: 440px;
-            // min-height: 250px;
-        }
+        min-width: 335px;
+        min-height: 190px;
+        @include BoxShadow(cust-01);
     }
 }
 
-.c-main-info {
+.c-main-info, .c-main-program {
     .o-page-wrapper {
         display: inherit;
-        margin: 60px auto;
+        margin: 40px auto;
     }
 
     &__card {
-        border: 1px solid $blue-400;
+         padding: 32px 0;
         &-header {
             display: flex;
             margin: 0 auto;
-    
+
             h2 {
                 margin: 0;
             }
@@ -45,6 +47,13 @@
                 display: flex;
                 align-self: start;
                 margin-right: 18px;
+
+                .logo-group {
+                    display: flex;
+                    flex-flow: column wrap;
+                    align-self: start;
+                    margin-right: 18px;
+                }
             }
         }
         &-body {
@@ -53,6 +62,4 @@
             margin: 0 auto;
         }
     }
-    
-    
 }

@@ -39,3 +39,64 @@
         }
     }
 }
+
+.c-main-info {
+    &__card--dotted-dorder-primary-100 {
+        border-bottom: 10px dotted $secondary-100;
+    }
+
+    a {
+        color: $secondary-800;
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+.c-main-program {
+    background-color: $secondary-400;
+    min-height: 554px;
+    color: $grey-700;
+    padding: 64px 0;
+    // border-bottom: 10px dotted $backgroud-withe;
+    // @include BoxShadow(3);
+    &--top-boreder {
+        display: flex;
+        position: relative;
+        top: -68px;
+        border-top: 10px dotted $backgroud-withe;
+        height: 10px;
+    }
+    &--bottom-boreder {
+        display: flex;
+        position: relative;
+        bottom: -69px;
+        border-bottom: 10px dotted $backgroud-withe;
+        height: 10px;
+      
+    }
+
+    .o-page-wrapper {
+        margin: 0;
+    }
+
+    select {
+        border: 1px solid $secondary-400;
+        border-radius: 6px;
+        padding: 14px 56px 16px 14px;
+        width: 100%;
+        min-width: 100%;
+        margin: 16px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &__caption {
+            font-size: 18px;
+            font-weight: 800;
+        }
+    }
+}

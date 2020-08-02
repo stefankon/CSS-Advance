@@ -57,7 +57,7 @@ h1 {
 h2 {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 30px;
   line-height: 36px;
 }
@@ -330,6 +330,10 @@ summary {
 }
 
 /* 04. Elements */
+select {
+  background: #FFFFFF;
+}
+
 /* 05. Objects */
 /* ==========================================================================
    #CONTAINER-OBJECT
@@ -510,36 +514,42 @@ summary {
       -ms-flex-pack: center;
           justify-content: center;
   justify-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-image: url(../../assets/images/video-clip.svg);
+  content: "";
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 12px;
   margin: 16px auto;
+  min-width: 335px;
+  min-height: 190px;
+  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.12)), drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.2));
+          box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.12)), drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.2));
 }
 
-.c-main-introduction__video--desctop {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c-main-info .o-page-wrapper {
+.c-main-info .o-page-wrapper, .c-main-program .o-page-wrapper {
   display: inherit;
-  margin: 60px auto;
+  margin: 40px auto;
 }
 
-.c-main-info__card {
-  border: 1px solid #44a9f8;
+.c-main-info__card, .c-main-program__card {
+  padding: 32px 0;
 }
 
-.c-main-info__card-header {
+.c-main-info__card-header, .c-main-program__card-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
 }
 
-.c-main-info__card-header h2 {
+.c-main-info__card-header h2, .c-main-program__card-header h2 {
   margin: 0;
 }
 
-.c-main-info__card-header--logo {
+.c-main-info__card-header--logo, .c-main-program__card-header--logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -548,7 +558,20 @@ summary {
   margin-right: 18px;
 }
 
-.c-main-info__card-body {
+.c-main-info__card-header--logo .logo-group, .c-main-program__card-header--logo .logo-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -ms-flex-item-align: start;
+      align-self: start;
+  margin-right: 18px;
+}
+
+.c-main-info__card-body, .c-main-program__card-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -622,5 +645,67 @@ summary {
 .c-main-title .o-page-wrapper .c-main-title__heading {
   text-align: center;
   text-transform: none;
+}
+
+.c-main-info__card--dotted-dorder-primary-100 {
+  border-bottom: 10px dotted #FFECB3;
+}
+
+.c-main-info a {
+  color: #ff9100;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.c-main-program {
+  background-color: #FFCB29;
+  min-height: 554px;
+  color: #565656;
+  padding: 64px 0;
+}
+
+.c-main-program--top-boreder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  top: -68px;
+  border-top: 10px dotted #FFFFFF;
+  height: 10px;
+}
+
+.c-main-program--bottom-boreder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  bottom: -69px;
+  border-bottom: 10px dotted #FFFFFF;
+  height: 10px;
+}
+
+.c-main-program .o-page-wrapper {
+  margin: 0;
+}
+
+.c-main-program select {
+  border: 1px solid #FFCB29;
+  border-radius: 6px;
+  padding: 14px 56px 16px 14px;
+  width: 100%;
+  min-width: 100%;
+  margin: 16px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.c-main-program select:hover {
+  cursor: pointer;
+}
+
+.c-main-program select__caption {
+  font-size: 18px;
+  font-weight: 800;
 }
 /*# sourceMappingURL=main.css.map */
