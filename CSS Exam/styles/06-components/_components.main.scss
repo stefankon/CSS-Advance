@@ -10,20 +10,24 @@
 
     &__video {
         display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        justify-items: center;
-        justify-content: center;
-        justify-items: center;
-        width: fit-content;
+        // flex-flow: row wrap;
+        // align-items: center;
+        // justify-items: center;
+        // justify-content: center;
+        // justify-items: center;
+        // width: fit-content;
+        // height: fit-content;
         background-image: url(../../assets/images/video-clip.svg);
         content: "";
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: auto;
         border-radius: 12px;
-        margin: 16px auto;
-        min-width: 335px;
+        min-width: 350px;
+        max-width: 440px;
+        width: 100%;
         min-height: 190px;
+        max-height: 248px;
+        height: 100%;
         @include BoxShadow(cust-01);
     }
 }

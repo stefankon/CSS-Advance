@@ -1,160 +1,146 @@
-// .footer {
-//     display: block;
-//     background: $grey-700;
-//     color: #ffffff;
-//     min-height: 300px;
-//     margin-top: 130px;
-//     border: none;
-//     position: relative;
-
-//     &__logo {
-//         display: flex;
-//         margin-top: 25px;
-//         position: absolute;
-//         bottom: 0px;
-//         z-index: 1;
-//     }
-
-//     &__navbar {
-//         display: flex;
-//         flex-flow: column wrap;
-//         position: relative;
-//         width: 80%;
-//         left: 300px;
-
-//         .footer-navbar__items {
-//             display: flex;
-//             justify-content: space-between;
-//             position: relative;
-//             z-index: 5;
-//             .footer-navbar__item {
-//                 list-style: none;
-//                 margin: 15px;
-//                 font-weight: 700;
-//                 &--wrapper {
-//                     margin-top: 30px;
-//                     margin-left: -50px;
-//                 }
-//             }
-
-//             .footer-navbar__items--content {
-//                 display: block;
-//                 padding: 0;
-
-//                 .footer-navbar__item--content {
-//                     list-style: none;
-//                     margin: 15px 0px;
-//                     line-height: 14px;
-//                     a {
-//                         text-decoration: none;
-//                         color: $grey-200;
-//                         font-size: 14px;
-//                         line-height: 14px;
-
-//                         &:hover {
-//                             cursor: pointer;
-//                             color: $primary-300;
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-
-//     &__logo-wrapper {
-//         position: absolute;
-//         bottom: 0px;
-//     }
-// }
-
-// .footer::before {
-//     content: "";
-//     background: $grey-500;
-//     width: 100%;
-//     height: 15px;
-//     display: inline-block;
-//     position: relative;
-// }
-
-// .social__wrapper {
-//     display: inline-flex;
-//     flex-flow: column wrap;
-//     overflow: hidden;
-//     margin: 0px 10px;
-//     // align-items: center;
-//     &--facebook {
-//         border-radius: 10px;
-//         // border-style: none;
-//         padding-top: 4px;
-//         padding-left: 4px;
-//         width: 20px;
-//         height: 20px;
-//         font-size: 18px;
-//         background: $grey-200;
-//         color: $grey-700;
-//         &--font {
-//             color: $grey-700;
-//             &:hover {
-//                 background: $primary-300;
-//                 cursor: pointer;
-//                 overflow: hidden;
-//             }
-//         }
-//     }
-
-//     &--instagram {
-//         width: 20px;
-//         height: 20px;
-//         font-size: 22px;
-//     }
-// }
-
-// .company-info {
-//     display: block;
-
-//     p {
-//         color: $grey-500;
-//         margin: 0;
-//         padding-bottom: 5px;
-//     }
-// }
-
-//=========================
-
 .c-footer {
-    display: flex;
+    display: block;
     background-color: $grey-700;
     min-height: 300px;
+    padding-top: 20px;
+    border-top: 12px solid $grey-500;
+    position: relative;
 
     .o-page-wrapper {
-        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "one three"
+            "two three"
+            "four four";
         width: 100%;
     }
+}
+
+.c-footer-navbar-comtainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0;
+    width: 100%;
 }
 
 .c-footer-navbar-element {
     display: flex;
     flex-flow: column wrap;
-    background-color: salmon;
+    background-color: transparent;
+    margin-top: 32px;
 
-    h5 {
+    .h5-likes {
         color: white;
         margin: 0;
-        padding: 0;
+        padding-bottom: 10px;
+        white-space: nowrap;
     }
+
+    &--info-wrapper {
+        border-top: 1px solid $grey-600;
+        margin: 32px 20px;
+    }
+
+    &--desctop {
+        display: none;
+    }
+
     .c-footer-navbar__items {
         display: flex;
         flex-flow: column wrap;
         list-style: none;
         margin: 0;
         padding: 0;
+        text-decoration: none;
+
+        .c-footer-navbar__item-content {
+            padding: 6px 0;
+            a {
+                text-decoration: none;
+                color: $grey-200;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+
+                &:hover {
+                    color: $primary-300;
+                }
+            }
+        }
     }
 
-    .c-footer-navbar__item-content {
-        padding: 10px 6px;
-        a {
-            text-decoration: none;
-            color: $background-white;
+    .c-footer-navbar-element__find-us {
+        margin-bottom: 8px;
+    }
+
+    .c-footer-navbar-element__social-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+
+        .c-footer-navbar__social-icon {
+            margin-right: 24px;
+            a {
+                text-decoration: none;
+                color: $grey-200;
+                font-size: 20px;
+                line-height: 20px;
+
+                &:hover {
+                    color: $primary-300;
+                }
+            }
         }
+    }
+
+    .c-footer-navbar-element__social-wrapper--mobile {
+        display: flex;
+        flex-flow: row wrap;
+        padding-top: 20px;;
+
+        .c-footer-navbar__social-icon {
+            margin-right: 24px;
+            a {
+                text-decoration: none;
+                color: $grey-200;
+                font-size: 20px;
+                line-height: 20px;
+
+                &:hover {
+                    color: $primary-300;
+                }
+            }
+        }
+    }
+
+    .c-footer-navbar-element__company-info {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 335px;
+
+        p {
+            font-size: 16px;
+            line-height: 19px;
+            color: $grey-500;
+        }
+    }
+}
+
+.c-footer-section {
+    &__one {
+        grid-area: one;
+    }
+    &__two {
+        grid-area: two;
+    }
+    &__three {
+        grid-area: three;
+    }
+    &__four {
+        grid-area: four;
     }
 }
