@@ -69,10 +69,18 @@
     &--bottom-boreder {
         display: flex;
         position: relative;
-        bottom: -69px;
+        bottom: -81px;
         border-bottom: 10px dotted $backgroud-withe;
         height: 10px;
-      
+    }
+    &--bottom-boreder-shadow {
+        display: flex;
+        position: relative;
+        bottom: -64px;
+        border-bottom: 10px dotted $backgroud-withe;
+        height: 10px;
+        @include BoxShadow(2);
+        z-index: -1;
     }
 
     .o-page-wrapper {

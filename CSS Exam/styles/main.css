@@ -76,6 +76,13 @@ h4 {
   line-height: 24px;
 }
 
+h5 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+
 /* 02. Tools */
 /* 03. Generic */
 /*! modern-normalize v0.7.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -357,6 +364,12 @@ select {
 .o-container__footer {
   margin: 0;
   padding: 0;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
 }
 
 /* ==========================================================================
@@ -679,9 +692,22 @@ select {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  bottom: -69px;
+  bottom: -81px;
   border-bottom: 10px dotted #FFFFFF;
   height: 10px;
+}
+
+.c-main-program--bottom-boreder-shadow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  bottom: -64px;
+  border-bottom: 10px dotted #FFFFFF;
+  height: 10px;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  z-index: -1;
 }
 
 .c-main-program .o-page-wrapper {
