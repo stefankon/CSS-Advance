@@ -1,0 +1,43 @@
+.c-header {
+    display: block;
+    position: relative;
+    min-height: 75px;
+    @include BoxShadow (2);
+
+    .o-page-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        min-height: 75px;
+        align-content: center;
+
+    }
+}
+
+.c-logo {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    justify-content: start;
+    align-content: center;
+
+    &__arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        &--text {
+            color: $grey-700;
+            font-size: 32px;
+            line-height: 22px;
+        }
+    }
+    &__vertical {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+    }
+    &__horizontal {
+        display: none;
+        justify-items: center;
+        align-items: center;
+    }
+}

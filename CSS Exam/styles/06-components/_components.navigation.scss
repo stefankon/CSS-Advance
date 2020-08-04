@@ -1,28 +1,6 @@
 .c-navigation {
     position: relative;
-    margin: 0 auto;
-    padding-top: 8px;
-    min-height: 72px;
-    background-color: $backgroud-withe;
-    @include BoxShadow(2);
 
-    .o-page-wrapper {
-        display: flex;
-        justify-items: center;
-        align-items: center;
-        justify-content: space-between;
-
-        .c-logo__vertical {
-            display: flex;
-            justify-items: center;
-            align-items: center;
-        }
-        .c-logo__sadwich-menu {
-            display: flex;
-            justify-items: center;
-            align-items: center;
-        }
-    }
     &__hidden-menu {
         visibility: hidden;
         &--show {
@@ -33,8 +11,9 @@
     &__header {
         display: block;
         position: absolute;
+        top: 55px;
+        padding: 35px 20px;
         left: 1em;
-        min-width: 335px;
         width: 100vw;
         background-color: $grey-50;
         @include BoxShadow(3);
@@ -43,15 +22,9 @@
         }
     }
 
-    .c-btn.c-btn--secondary {
-        font-size: 13px;
-        margin-right: 24px;
-    }
-
     &__item {
         list-style: none;
         padding: 5px;
-        // min-width: 100px;
         a {
             text-decoration: none;
             color: $grey-700;
@@ -62,5 +35,13 @@
                 cursor: pointer;
             }
         }
+    }
+
+    &__sadwich-menu {
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        justify-self: end;
+        column-gap: 24px;
     }
 }

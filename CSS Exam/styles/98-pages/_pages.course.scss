@@ -43,11 +43,10 @@
 
 .c-main-dotted-card {
     display: grid;
-    grid-template-rows: 140px 10px 1fr;
+    grid-template-rows: 140px 12px 1fr;
     position: relative;
     left: 0;
     top: -55px;
-    margin: 0 20px;
     min-width: 335px;
     min-height: 562px;
     background-color: $backgroud-withe;
@@ -57,28 +56,89 @@
 
     &__button {
         display: flex;
+        justify-content: center;
+        align-items: center;
         position: relative;
-        // height: 140px;
         width: 100%;
         border-top-left-radius: 12px;
         border-top-right-radius: 12px;
         background-color: $backgroud-withe;
         z-index: 2;
     }
-
     &__dots {
-        display: inline-block;
+        display: grid;
+        grid-template-columns: 5px 1fr 5px;
         position: relative;
-        background-image: url("../../assets/images/withe-dot-Figma.png");
-        background-repeat: repeat;
-        background-size: contain;
-        width: 100%;
         z-index: 3;
+
+        &--start {
+            display: flex;
+            position: relative;
+            background-image: url("../../assets/images/dot-white-2.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 100%;
+            z-index: 3;
+        }
+        &--body {
+            display: flex;
+            position: relative;
+            background-image: url("../../assets/images/dot-white-1.png");
+            background-repeat: repeat;
+            background-size: contain;
+            width: 100%;
+            z-index: 3;
+        }
+        &--end {
+            display: flex;
+            position: absolute;
+            background-image: url("../../assets/images/dot-white-3.png");
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 100%;
+            z-index: 4;
+        }
     }
 
     &__content {
-        display: flex;
+        display: grid;
         position: relative;
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: 80px 1fr;
+
+        &-pic {
+            display: flex;
+            justify-content: center;
+        }
+
+        &-content {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+
+            &--one {
+                display: flex;
+                align-self: flex-end;
+                font-family: Lato;
+                padding-bottom: 6px;
+            }
+            &--two {
+                margin: 0;
+                padding: 0;
+                color: $secondary-800;
+            }
+        }
+    }
+
+    &__separator {
+        height: 2px;
+        width: 24px;
+        background-color: $grey-100;
+        margin-top: 24px;
+        margin-left: 24px;
     }
 }
 .c-main-info {
@@ -120,28 +180,52 @@
         bottom: -64px;
         border-bottom: 10px dotted $backgroud-withe;
         height: 10px;
-        @include BoxShadow(2);
+        @include BoxShadow(1);
         z-index: -1;
     }
 
-    select {
-        border: 1px solid $secondary-400;
-        border-radius: 6px;
-        padding: 14px 56px 16px 14px;
-        width: 100%;
-        min-width: 100%;
-        margin: 16px 0;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+    &__option-field {
+        position: relative;
+        z-index: 1;
+        select {
+            border: 1px solid $secondary-400;
+            border-radius: 6px;
+            padding: 14px 56px 16px 14px;
+            width: 100%;
+            min-width: 100%;
+            margin: 16px 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
 
-        &:hover {
-            cursor: pointer;
+            &:hover {
+                cursor: pointer;
+            }
+            &::selection {
+                text-rendering: auto;
+            }
+        }
+        #presentations {
+            padding: 14px 56px 64px 14px;
         }
 
-        // &__caption {
-        //     font-size: 18px;
-        //     font-weight: 700;
-        // }
+        #wokshop {
+            padding: 14px 56px 42px 14px;
+        }
+
+        &--stretch {
+            display: flex;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            position: absolute;
+            top: 220px;
+            left: 14px;
+            z-index: 2;
+        }
     }
 }
+

@@ -6,93 +6,482 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course</title>
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 </head>
 
 <body>
     <header class="o-container__header">
-        <nav class="c-navigation">
+        <div class="c-header">
             <div class="o-page-wrapper">
-                <article class="c-logo__vertical">
-                    <div>
-                        <img src="./assets/icons/logo-triangle.svg">
+                <article class="c-logo">
+                    <div class="c-logo__arrow">
+                        <a href="/" class="c-logo__arrow--text">
+                            <i class="fas fa-caret-right"></i>
+                        </a>
                     </div>
-                    <div>
+                    <div class="c-logo__vertical">
                         <img src="./assets/icons/logo-vertical.svg">
                     </div>
-
+                    <div class="c-logo__horizontal">
+                        <img src="./assets/icons/logo-horizontal.svg">
+                    </div>
                 </article>
-
-                <div class="c-navigation__hidden-menu--show">
-                    <ul class="c-navigation__header">
-                        <li class="c-navigation__item">
-                            <a href="#">обучения</a>
-                        </li>
-                        <li class="c-navigation__item">
-                            <a href="#">Събития</a>
-                        </li>
-                        <li class="c-navigation__item">
-                            <a href="#">Преподаватели</a>
-                        </li>
-                        <li class="c-navigation__item">
-                            <a href="#">Блог</a>
-                        </li>
-                        <li class="c-navigation__item">
-                            <a href="#">Контакти</a>
-                        </li>
-                        <li class="c-navigation__item">
-                            <img src="./assets/icons/search-header.svg" alt="Търсачка">
-                        </li>
-                    </ul>
-                </div>
-                <article class="o-page-wrappe c-logo__sadwich-menu">
+                <article class="c-header-navbar">
+                    <div class="c-navigation__hidden-menu--show">
+                        <ul class="c-navigation__header">
+                            <li class="c-navigation__item">
+                                <a href="#">обучения</a>
+                            </li>
+                            <li class="c-navigation__item">
+                                <a href="#">Събития</a>
+                            </li>
+                            <li class="c-navigation__item">
+                                <a href="#">Преподаватели</a>
+                            </li>
+                            <li class="c-navigation__item">
+                                <a href="#">Блог</a>
+                            </li>
+                            <li class="c-navigation__item">
+                                <a href="#">Контакти</a>
+                            </li>
+                            <li class="c-navigation__item">
+                                <img src="./assets/icons/search-header.svg" alt="Търсачка">
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="c-navigation__sadwich-menu">
                     <button class="c-btn c-btn--secondary">
                         вход
                     </button>
-                    <div class="o-sandwich-menu-wrapper">
-                        <a href="./course.html">
-                            <img src="./assets/icons/times-solid.svg" alt="Връщане">
-                        </a>
-                    </div>
-               </article>
 
+                    <a href="./course.html">
+                        <div class="o-sandwich-menu-wrapper">
+                            <img src="./assets/icons/times-solid.svg" alt="Меню">
+                        </div>
+                    </a>
+                </article>
             </div>
-        </nav>
-
+        </div>
     </header>
-    <main class="-container__main">
-        <section class="c-main_title">
+    <main class="o-container__main">
+        <section class="c-main-title">
             <div class="o-page-wrapper">
-                <h1>Първи стъпки</h1>
+                <div class="c-main-title__label">
+                    <article>
+                        <p>Начинаещ</p>
+                    </article>
+                </div>
+                <div class="c-main-title__heading">
+                    <h2>
+                        Първи стъпки в програмирането - част 2
+                    </h2>
+                </div>
             </div>
         </section>
-        <section class="c-main_info">
+        <section class="c-main-introduction">
             <div class="o-page-wrapper">
-                <h2>За кого е подходящ
-            </div>
-            </h2>
-            <div class="o-page-wrapper">
-                <h2>Важно!</h2>
+                <article class="c-main-dotted-card">
+                    <div class="c-main-dotted-card__button">
+                        <button class="c-btn c-btn--primary">
+                            записване
+                        </button>
+                    </div>
+                    <div class="c-main-dotted-card__dots">
+                        <div class="c-main-dotted-card__dots--start"></div>
+                        <div class="c-main-dotted-card__dots--body"></div>
+                        <div class="c-main-dotted-card__dots--end"></div>
+                    </div>
+                    <div class="c-main-dotted-card__content">
+                        <section class="c-main-dotted-card__item">
+                            <div class="c-main-dotted-card__item-pic">
+                                <img src="./assets/icons/money 1.svg" alt="Item picture">
+                            </div>
+                            <div class="c-main-dotted-card__item-content">
+                                <span class="c-main-dotted-card__item-content--one h5-likes">
+                                    цена
+                                </span>
+                                <span class="c-main-dotted-card__item-content--two h4-likes">
+                                   500 лв.
+                                </span>
+                            </div>
+                        </section>
+                        <section class="c-main-dotted-card__separator">
+                            <div class="c-main-dotted-card__separator-element"></div>
+                        </section>
+                        <section class="c-main-dotted-card__item">
+                            <div class="c-main-dotted-card__item-pic">
+                                <img src="./assets/icons/people 1.svg" alt="Item picture">
+                            </div>
+                            <div class="c-main-dotted-card__item-content">
+                                <span class="c-main-dotted-card__item-content--one h5-likes">
+                                    подходящ за
+                                </span>
+                                <span class="c-main-dotted-card__item-content--two h4-likes">
+                                    1-6 клас
+                                </span>
+                            </div>
+                        </section>
+                        <section class="c-main-dotted-card__separator">
+                            <div class="c-main-dotted-card__separator-element"></div>
+                        </section>
+                        <section class="c-main-dotted-card__item">
+                            <div class="c-main-dotted-card__item-pic">
+                                <img src="./assets/icons/calendar 1.svg" alt="Item picture">
+                            </div>
+                            <div class="c-main-dotted-card__item-content">
+                                <span class="c-main-dotted-card__item-content--one h5-likes">
+                                    начало
+                                </span>
+                                <span class="c-main-dotted-card__item-content--two h4-likes">
+                                    16 май 2020
+                                </span>
+                            </div>
+                        </section>
+                        <section class="c-main-dotted-card__separator">
+                            <div class="c-main-dotted-card__separator-element"></div>
+                        </section>
+                        <section class="c-main-dotted-card__item">
+                            <div class="c-main-dotted-card__item-pic">
+                                <img src="./assets/icons/location 1.svg" alt="Item picture">
+                            </div>
+                            <div class="c-main-dotted-card__item-content">
+                                <span class="c-main-dotted-card__item-content--one h5-likes">
+                                    локация
+                                </span>
+                                <span class="c-main-dotted-card__item-content--two h4-likes">
+                                    гр. София
+                                </span>
+                            </div>
+                        </section>
+                        </div>
+                </article>
+                <div class="c-main-introduction__text">
+                    <p>
+                        Това е втора част към онлайн обучението „Първи стъпки в програмирането”, който е първият и
+                        основополагащ онлайн модул по време на обучението по програмиране на SoftUni Kids. Той е
+                        насочен
+                        към изграждане на основни компетенции и умения, необходими на децата, за да продължат
+                        обучението
+                        си в следващи модули от програмата ни за малки програмисти. Първо ниво в направление
+                        софтуерни
+                        курсове се смята за преминато, след завършване и на двете части от курса и получен
+                        сертификат.
+                    </p>
+                    <p>
+                        По време на курса "Първи стъпки в програмирането - част 2", децата получават знания за
+                        видовете
+                        цикъл, събития, а също така се учат на активно общуване в група и работа в екип – принципи,
+                        които са заложени в цялостната програма на обучението по програмиране на SoftUni Kids.
+                    </p>
+                    <p>
+                        Курсът завършва със създаване на сценарии, които са измислени, съставени и програмирани от
+                        децата. В последния ден на занятията родителите са добре дошли в последния половин час, за
+                        да
+                        видят и презентацията на създадената от децата им програма! След завършване на втората част
+                        от
+                        курса, децата получават и своите сертификати за успешно преминато първо ниво „Първи стъпки в
+                        програмирането“.
+                    </p>
+                </div>
+                <div class="c-main-introduction__video">
+                    <!-- <img src="./assets/images/video-clip.svg" alt="Видео презентация"
+                    class="c-main-introduction__video--desctop"> -->
+                </div>
             </div>
         </section>
-        <section class="c-main_program">
+        <section class="c-main-info">
             <div class="o-page-wrapper">
-                <h2>Програма на обучението</h2>
+                <article class="c-main-info__card c-main-info__card--dotted-dorder-primary-100">
+                    <div class="c-main-info__card-header">
+                        <img src="./assets/icons/people 1.svg" class="c-main-info__card-header--logo">
+                        <h2>За кого е подходящ?</h2>
+                    </div>
+                    <div class="c-main-info__card-bodyr">
+                        <p>
+                            Онлайн курсът е подходящ за напълно начинаещи: необходимо е децата да могат да четат и
+                            пишат
+                            и да имат достъп до компютър с интернет връзка.
+                        </p>
+                    </div>
+                </article>
+                <article class="c-main-info__card">
+                    <div class="c-main-info__card-header">
+                        <div class="c-main-info__card-header--logo">
+                            <div class="logo-group">
+                                <img src="./assets/icons/bell/Vector-1.svg" alt="">
+                                <img src="./assets/icons/bell/Vector-2.svg" alt="">
+                                <img src="./assets/icons/bell/Vector.svg" alt="">
+                            </div>
+
+                        </div>
+                        <h2>Важно!</h2>
+                    </div>
+                    <div class="c-main-info__card-bodyr">
+                        <p>
+                            При записване на второ дете (братче/сестриче) получавате <strong>20% отстъпка</strong>
+                            от
+                            таксата за второто
+                            дете.
+                        </P>
+                        <P>
+                            Занятията стартират при сформиране на група.
+                        </p>
+                    </div>
+                </article>
             </div>
         </section>
-        <section class="c-main_additional-info">
+        <section class="c-main-program">
+            <span class="c-main-program--top-boreder"></span>
             <div class="o-page-wrapper">
-                <h2>Кога и къде се провеждат занятията?</h2>
+                <div class="c-main-program__container">
+                    <div class="c-main-program__card">
+                        <div class="c-main-info__card-header">
+                            <img src="./assets/icons/book 2.svg" class="c-main-program__card-header--logo">
+                            <h2>Програма на обучението</h2>
+                        </div>
+                        <div class="c-main-program__card-body">
+                            <p>
+                                През цялото време на курса ще имаме постоянна двустранна комуникация с децата. Ще
+                                имат
+                                възможност да ни задават въпроси и да общуват помежду си (най-вече в почивките и
+                                след
+                                занятия). Ще се забавляваме докато учим как да прогамираме.
+                            </p>
+                        </div>
+                        <div class="c-main-program__option-field">
+                            <span class="h5-likes">занятия</span>
+                            <select name="loops" id="loops">
+                                <option value="loops">
+                                    1. Цикли и безкрайни цикли
+                                </option>
+                                <option value="loops">
+                                    1. Цикли и безкрайни цикли
+                                </option>
+                                <option value="loops">
+                                    1. Цикли и безкрайни цикли
+                                </option>
+                            </select>
+                            <select name="events" id="events">
+                                <option value="events">2. Събития</option>
+                                <option value="events">2. Събития</option>
+                                <option value="events">2. Събития</option>
+                            </select>
+                            <div class="c-main-program__option-field--stretch">
+                                3. Презентационни умения. Създаване на цялостен сценарий в Scratch.
+                            </div>
+                            <select name="presentations" id="presentations">
+                                <option value="presentations" class="my-option">
+
+                                </option>
+                                <option value="presentations">
+                                    3. Презентационни умения. Създаване на цялостен сценарий в Scratch.
+                                </option>
+                                <option value="presentations">
+                                    3. Презентационни умения. Създаване на цялостен сценарий в Scratch.
+                                </option>
+                            </select>
+                            <select name="workshop" id="wokshop">
+                                <option value="workshop">
+                                    4. Работа по финален проект и презентирането му.
+                                </option>
+                                <option value="workshop">
+                                    4. Работа по финален проект и презентирането му.
+                                </option>
+                                <option value="workshop">
+                                    4. Работа по финален проект и презентирането му.
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <span class="c-main-program--bottom-boreder"></span>
+            <span class="c-main-program--bottom-boreder-shadow"></span>
+        </section>
+        <section class="c-main-info">
             <div class="o-page-wrapper">
-                <h2>Допълнителна информация</h2>
+                <article class="c-main-info__card c-main-info__card--dotted-dorder-primary-100">
+                    <div class="c-main-info__card-header">
+                        <img src="./assets/icons/clock 1.svg" class="c-main-info__card-header--logo">
+                        <h2>Кога и къде се провеждат занятията?</h2>
+                    </div>
+                    <div class="c-main-info__card-bodyr">
+                        <p>
+                            Да се опише максимално подробно <strong>кога</strong> и <strong>къде</strong> се
+                            провеждат
+                            занятията. За примера съм изпозлвал
+                            описание от онлайн курс.
+                        </p>
+                        <p>
+                            Курсът е в <strong>ОНЛАЙН ФОРМАТ</strong>. Обучението се провежда в рамките на <strong>2
+                                астрономически часa</strong>, веднъж
+                            седмично в продължение на <strong>4 седмици.</strong>
+                        </p>
+                        <p>
+                            Денят и часа зависят от групата, в която запишете детето си. Занятията ще се проведат в
+                            онлайн платформа, за която ще получите линк преди занятието, с който да достъпите
+                            виртуалната ни класна стая.
+                        </p>
+                        <p>
+                            <strong>Крайният срок за записване е 05/06/2020, 23:59 часа включително.</strong>
+                        </p>
+                    </div>
+                </article>
+                <article class="c-main-info__card">
+                    <div class="c-main-info__card-header">
+                        <div class="c-main-info__card-header--logo">
+                            <img src="./assets/icons/logo-add-info.svg" class="c-main-info__card-header--logo">
+                        </div>
+                        <h2>Допълнителна информация</h2>
+                    </div>
+                    <div class="c-main-info__card-bodyr">
+                        <p>
+                            В деня на първото занятие на вашето дете ще имаме нужда от <strong>два подписани и
+                                попълнени
+                                екземпляра на договор</strong> за обучение в SoftUni Kids. Ще получите договора на
+                            имейл
+                            адреса ви,
+                            след заплащането на обучението. Може да го разгледате от <span><a href="#">тук</a></span>.
+                        </P>
+                        <P>
+                            За успешното провеждане на занятията трябва да осигурите на детето си <strong>компютър,
+                                интернет
+                                връзка и спокойна среда за работа</strong>. За по-лесна комуникация ще получите
+                            достъп
+                            до група в
+                            социалните мрежи, където преподавателите ще помагат на децата при затруднения в достъпа
+                            до
+                            виртуалната ни класна стая.
+                        </p>
+                        <p>
+                            Почивен ден за групите - няма.
+                        </p>
+
+                        <p>
+                            <strong>Запазването на място става единствено след успешно заплащане.</strong>
+                        </p>
+
+                    </div>
+                </article>
             </div>
         </section>
+
+
     </main>
-    <footer class="-container__footer">
-        <div class="o-page-wrapper">
-            <nav class="o-nav_footer">
-                FOOTER!
-            </nav>
+    <footer class="o-container__footer">
+        <div class="c-footer">
+            <div class="o-page-wrapper">
+
+                <div class="c-footer-navbar-element c-footer-section__one">
+                    <span class="h5-likes">
+                        Softuni Kids
+                    </span>
+                    <ul class="c-footer-navbar__items">
+                        <li class="c-footer-navbar__item-content">
+                            <a href="#">Начало</a>
+                        </li>
+                        <li class="c-footer-navbar__item-content">
+                            <a href="#">Летни академии</a>
+                        </li>
+                        <li class="c-footer-navbar__item-content">
+                            <a href="#">Преподаватели</a>
+                        </li>
+                        <li class="c-footer-navbar__item-content">
+                            <a href="#">Блог</a>
+                        </li>
+                        <li class="c-footer-navbar__item-content">
+                            <a href="#">Контакти</a>
+                        </li>
+                        <li class="c-footer-navbar__item-content">
+                            <a href="#">Общи условия</a>
+                        </li>
+                        <li class="c-footer-navbar__item-content">
+                            <a href="#">Лични данни</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="c-footer-navbar-element c-footer-section__two">
+                    <span class="h5-likes">
+                        Всички обучения
+                    </span>
+                    <ul class="c-footer-navbar__items">
+                        <li class="c-footer-navbar__item-content">
+                            <a href="#">Курсове</a>
+                        </li>
+                        <li class="c-footer-navbar__item-content">
+                            <a href="#">Събития</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="c-footer-navbar-element c-footer-navbar-element--mobile c-footer-section__thrее">
+                    <span class="h5-likes">
+                        Всички инициативи
+                    </span>
+                    <ul class="c-footer-navbar__items">
+                        <li class="c-footer-navbar__item-content">
+                            <a href="#">Software University</a>
+                        </li>
+                        <li class="c-footer-navbar__item-content">
+                            <a href="#">SoftUni Digital</a>
+                        </li>
+                        <li class="c-footer-navbar__item-content">
+                            <a href="#">SoftUni Creative</a>
+                        </li>
+                        <li class="c-footer-navbar__item-content">
+                            <a href="#">SoftUni Svetlina</a>
+                        </li>
+                        <li class="c-footer-navbar__item-content">
+                            <a href="#">SoftUni Foundation</a>
+                        </li>
+                        <li class="c-footer-navbar__item-content">
+                            <div
+                                class="c-footer-navbar-element__social-wrapper c-footer-navbar-element__social-wrapper--mobile">
+                                <div class="c-footer-navbar__social-icon">
+                                    <a href="#">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                </div>
+                                <div class="c-footer-navbar__social-icon">
+                                    <a href="#">
+                                        <i class="fab fa-instagram"></i> </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="c-footer-navbar-element c-footer-navbar-element--info-wrapper c-footer-section__four">
+                    <div class="c-footer-navbar-element--desctop">
+                        <span class="c-footer-navbar-element__find-us h5-likes">
+                            Намери ни
+                        </span>
+                        <div class="c-footer-navbar-element__social-wrapper">
+                            <div class="c-footer-navbar__social-icon">
+                                <a href="#">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </div>
+                            <div class="c-footer-navbar__social-icon">
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i> </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-footer-navbar-element__company-info">
+                        <p>
+                            &copy 2016-2020 - SoftUni Kids. All Rights Reserved.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </footer>
 </body>
