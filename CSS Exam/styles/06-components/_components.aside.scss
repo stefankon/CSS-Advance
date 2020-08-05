@@ -1,0 +1,29 @@
+.c-registration {
+    min-height: 400px;
+    background-color: $blue-300;
+    border-top: 12px solid $blue-200;
+    color: $backgroud-white;
+    .h3-likes {
+        font-family: "Montserat", sans-serif;
+    }
+    .o-page-wrapper {
+        display: grid;
+        grid-template-rows: auto auto;
+    }
+    
+    
+    &__application-form {
+        &-input {
+            background-color: $blue-300;
+            border: 1px solid $backgroud-white;
+            border-radius: 6px;
+            padding: 16px;
+            width: 100%;
+
+            &::placeholder {
+                color: $backgroud-white;
+                opacity: 1;
+            }
+        }
+    }
+}

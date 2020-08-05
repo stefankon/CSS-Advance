@@ -1,0 +1,110 @@
+.c-main-trainers {
+    display: flex;
+    position: relative;
+    background-color: $secondary-600;
+    color: $backgroud-white;
+
+    &__heading {
+        h1,
+        p {
+            padding: 0;
+            margin: 0;
+        }
+        margin-top: 64px;
+        padding-bottom: 12px;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+
+        &-text {
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 12px;
+            margin-bottom: 64px;
+        }
+    }
+
+    &__curriculum {
+        display: flex;
+        margin-bottom: 64px;
+
+        &-grid {    
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            border-bottom: 10px dotted $primary-50;
+            margin-top: 48px;
+            padding-bottom: 64px;
+        }
+
+        &-card {
+            display: grid;
+            grid-template-rows: auto auto;
+            row-gap: 32px;
+
+            &__image {
+                display: flex;
+                flex-flow: column wrap;
+                align-items: center;
+                justify-items: center;
+
+                &-wrapper {
+                    width: 188px;
+                    height: 188px;
+                    border-radius: 50%;
+                    border: 8px solid $primary-300;
+                    overflow: hidden;
+                }
+            }
+
+            &__info {
+                display: grid;
+                grid-template-rows: auto auto;
+                row-gap: 8px;
+            }
+            &__info-title {
+                display: flex;
+                flex-flow: column wrap;
+                align-items: center;
+                justify-items: center;
+                h4 {
+                    color: $primary-300;
+                    margin: 0;
+                }
+                p {
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: $grey-400;
+                    margin: 0;
+                    padding-top: 8px;
+                }
+            }
+            &__info-text {
+                color: $grey-700;
+            }
+        }
+    }
+
+    &__team {
+        display: grid;
+        margin-top: 64px;
+        .c-main-trainers__curriculum-card {
+            grid-template-rows: auto auto 24px;
+            row-gap: 24px;
+        }
+        &-column {
+            &-two {
+                display: none;
+            }
+            &-three {
+                display: none;
+            }
+            &-four {
+                display: none;
+            }
+        }
+    }
+}

@@ -2,7 +2,7 @@
     display: flex;
     min-height: 302px;
     background-color: $blue-400;
-    color: $backgroud-withe;
+    color: $backgroud-white;
 
     .o-page-wrapper {
         display: flex;
@@ -43,13 +43,13 @@
 
 .c-main-dotted-card {
     display: grid;
-    grid-template-rows: 140px 12px 1fr;
+    grid-template-rows: 140px 14px 1fr;
     position: relative;
     left: 0;
     top: -55px;
     min-width: 335px;
     min-height: 562px;
-    background-color: $backgroud-withe;
+    background-color: $backgroud-white;
     @include BoxShadow(1);
     border-radius: 12px;
     z-index: 1;
@@ -62,32 +62,36 @@
         width: 100%;
         border-top-left-radius: 12px;
         border-top-right-radius: 12px;
-        background-color: $backgroud-withe;
+        background-color: $backgroud-white;
         z-index: 2;
     }
     &__dots {
         display: grid;
-        grid-template-columns: 5px 1fr 5px;
+        grid-template-columns: 10px 1fr 5px;
+        column-gap: 5px;
         position: relative;
         z-index: 3;
 
         &--start {
             display: flex;
-            position: relative;
+            position: absolute;
             background-image: url("../../assets/images/dot-white-2.png");
             background-repeat: no-repeat;
             background-size: contain;
             width: 100%;
-            z-index: 3;
+            height: 14px;
+            z-index: 5;
         }
         &--body {
             display: flex;
-            position: relative;
+            position: absolute;
+            left: 9px;
             background-image: url("../../assets/images/dot-white-1.png");
             background-repeat: repeat;
             background-size: contain;
-            width: 100%;
-            z-index: 3;
+            width: 98%;
+            height: 14px;
+            z-index: 2;
         }
         &--end {
             display: flex;
@@ -96,6 +100,7 @@
             background-color: transparent;
             background-repeat: no-repeat;
             background-size: contain;
+            height: 14px;
             width: 100%;
             z-index: 4;
         }
@@ -158,27 +163,26 @@
     min-height: 554px;
     color: $grey-700;
     padding: 64px 0;
-    // border-bottom: 10px dotted $backgroud-withe;
-    // @include BoxShadow(3);
+   
     &--top-boreder {
         display: flex;
         position: relative;
         top: -68px;
-        border-top: 10px dotted $backgroud-withe;
+        border-top: 10px dotted $backgroud-white;
         height: 10px;
     }
     &--bottom-boreder {
         display: flex;
         position: relative;
         bottom: -81px;
-        border-bottom: 10px dotted $backgroud-withe;
+        border-bottom: 10px dotted $backgroud-white;
         height: 10px;
     }
     &--bottom-boreder-shadow {
         display: flex;
         position: relative;
         bottom: -64px;
-        border-bottom: 10px dotted $backgroud-withe;
+        border-bottom: 10px dotted $backgroud-white;
         height: 10px;
         @include BoxShadow(1);
         z-index: -1;
