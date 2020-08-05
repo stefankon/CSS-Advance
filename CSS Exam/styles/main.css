@@ -1282,7 +1282,6 @@ h5, .h5-likes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
   background-color: #FFB402;
   color: #FFFFFF;
   border: 1px solid #FFB402;
@@ -1451,9 +1450,11 @@ h5, .h5-likes {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  background-repeat: no-repeat;
   height: 425px;
   background-image: url(../../assets/images/Map.png);
   width: 100%;
+  z-index: -1;
 }
 
 .c-background-map__image img {
@@ -1472,10 +1473,10 @@ h5, .h5-likes {
       grid-template-rows: 150px 1fr 76px;
   -webkit-column-gap: 30px;
           column-gap: 30px;
-      grid-template-areas: 'address worktime' 'contacts .' 'button button';
+      grid-template-areas: "address worktime" "contacts ." "button button";
   background-color: #FFFFFF;
   position: absolute;
-  top: 202px;
+  top: 128px;
   left: 95px;
   width: 519px;
   height: 382px;
@@ -1522,6 +1523,11 @@ h5, .h5-likes {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  z-index: 2;
+}
+
+.c-background-map__contacts-card-button:hover {
+  cursor: pointer;
 }
 
 .c-background-map__contacts-card-wroktime-wrapper {
@@ -1540,6 +1546,126 @@ h5, .h5-likes {
 }
 
 .c-contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   min-height: 686px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.c-contact-form .h2-likes {
+  color: #41bead;
+  font-weight: 600;
+}
+
+.c-contact-form-card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 24px 52px 192px 48px;
+      grid-template-rows: 24px 52px 192px 48px;
+  row-gap: 32px;
+  max-width: 850px;
+  min-width: 335px;
+  width: 100%;
+}
+
+.c-contact-form-card__title {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  color: #41bead;
+  font-weight: 600;
+}
+
+.c-contact-form-card__info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -webkit-column-gap: 32px;
+          column-gap: 32px;
+}
+
+.c-contact-form-card__info input,
+.c-contact-form-card__info textarea, .c-contact-form-card__message input,
+.c-contact-form-card__message textarea {
+  border: 1px solid #919191;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 6px;
+  padding: 16px;
+  width: 100%;
+  resize: none;
+}
+
+.c-contact-form-card__info input::-webkit-input-placeholder,
+.c-contact-form-card__info textarea::-webkit-input-placeholder, .c-contact-form-card__message input::-webkit-input-placeholder,
+.c-contact-form-card__message textarea::-webkit-input-placeholder {
+  color: #919191;
+}
+
+.c-contact-form-card__info input:-ms-input-placeholder,
+.c-contact-form-card__info textarea:-ms-input-placeholder, .c-contact-form-card__message input:-ms-input-placeholder,
+.c-contact-form-card__message textarea:-ms-input-placeholder {
+  color: #919191;
+}
+
+.c-contact-form-card__info input::-ms-input-placeholder,
+.c-contact-form-card__info textarea::-ms-input-placeholder, .c-contact-form-card__message input::-ms-input-placeholder,
+.c-contact-form-card__message textarea::-ms-input-placeholder {
+  color: #919191;
+}
+
+.c-contact-form-card__info input::placeholder,
+.c-contact-form-card__info textarea::placeholder, .c-contact-form-card__message input::placeholder,
+.c-contact-form-card__message textarea::placeholder {
+  color: #919191;
+}
+
+.c-public-transport {
+  background-color: #FFF8E1;
+  min-height: 572px;
+  padding: 96px 0;
+}
+
+.c-public-transport .h2-likes,
+.c-public-transport .h3-likes {
+  color: #41bead;
+  font-weight: 600;
+}
+
+.c-public-transport__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 48px;
+}
+
+.c-public-transport__types {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -webkit-column-gap: 33px;
+          column-gap: 33px;
+}
+
+#find-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: 5;
+}
+
+#find-us:hover::before {
+  cursor: pointer !important;
 }
 /*# sourceMappingURL=main.css.map */

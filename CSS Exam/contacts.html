@@ -68,48 +68,134 @@
     <main class="o-container__main">
         <section class="c-background-map">
             <div class="c-background-map__image">
-                <!-- <img src="./assets/images/Map.png" alt="Map location"> -->
-            <div class="o-page-wrraper">
-                <div class="c-background-map__contacts-card">
-                    <article class="c-background-map__contacts-card-address">
-                        <h4>Адрес:</h4>
-                        <p>
-                            София, кв. Изгрев, ул. "Тинтява" 15-17, етаж 1,
-                            ПК: 1113
-                        </p>
+                <div class="o-page-wrraper">
+                    <div class="c-background-map__contacts-card">
+                        <article class="c-background-map__contacts-card-address">
+                            <h4>Адрес:</h4>
+                            <p>
+                                София, кв. Изгрев, ул. "Тинтява" 15-17, етаж 1,
+                                ПК: 1113
+                            </p>
+                        </article>
+                        <article class="c-background-map__contacts-card-contacts">
+                            <h4>Контакти:</h4>
+                            <p>+ 359 892 241 199</p>
+                            <p>digital@softuni.bg</p>
+                        </article>
+                        <article class="c-background-map__contacts-card-wroktime">
+                            <h4>Работно време:</h4>
+                            <div class="c-background-map__contacts-card-wroktime-wrapper">
+                                <div class="c-background-map__contacts-card-wroktime-wrapper--time">
+                                    <p>9:00 - 19:30</p>
+                                </div>
+                                <div class="c-background-map__contacts-card-wroktime-wrapper--day">
+                                    <p>Понеделник - Петък</p>
+                                </div>
+                                <div class="c-background-map__contacts-card-wroktime-wrapper--time">
+                                    <p>8:30 - 18:00</p>
+                                </div>
+                                <div class="c-background-map__contacts-card-wroktime-wrapper--day">
+                                    <p>Събота и Неделя</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="c-background-map__contacts-card-button">
+                            <button class="c-btn c-btn--middle" id="find-us">намери ни на картата</button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="c-contact-form">
+            <form class="c-contact-form-card">
+                <div class="c-contact-form-card__title">
+                    <span class="h2-likes">Пишете ни</span>
+                </div>
+                <div class="c-contact-form-card__info">
+                    <input type="text" name="title" placeholder="Заглавие">
+                    <input type="email" name="email" placeholder="Имейл адрес">
+                </div>
+                <div class="c-contact-form-card__message">
+                    <textarea name="message" id="message" cols="30" rows="9" placeholder="Съобщение"></textarea>
+                </div>
+                <div>
+                    <button class="c-btn c-btn--secondary">
+                        изпрати
+                    </button>
+                </div>
+            </form>
+        </section>
+        <section class="c-public-transport">
+            <div class="o-page-wrapper">
+                <header class="c-public-transport__title">
+                    <span class="h2-likes">Как да стигна до SoftUni?</span>
+                </header>
+                <div class="c-public-transport__types">
+                    <article class="c-public-transport-information">
+                        <div class="c-public-transport-information__title">
+                            <span class="h3-likes">Метро</span>
+                        </div>
+                        <div class="c-public-transport-information__stops">
+                            <p>
+                                Метростанция <strong>Жолио Кюри</strong> - на 5-10 минути от СофтУни
+                            </p>
+                        </div>
+                        <div class="c-public-transport-information__stops">
+                            <p>
+                                Метростанция <strong>Г. М. Димитров</strong> - на 5-10 минути от СофтУни
+                            </p>
+                        </div>
+
                     </article>
-                    <article class="c-background-map__contacts-card-contacts">
-                        <h4>Контакти:</h4>
-                        <p>+ 359 892 241 199</p>
-                        <p>digital@softuni.bg</p>
+                    <article class="c-public-transport-information">
+                        <div class="c-public-transport-information__title">
+                            <span class="h3-likes">Автобуси</span>
+                        </div>
+                        <div class="c-public-transport-information__stops">
+                            <p>
+                                <strong>67, 413</strong> - Спирка “СТЦ Интерпред” (1112) или спирка “ж.к. Дианабад” (0627) (на бул.
+                                Драган Цанков)
+                            </p>
+                        </div>
+                        <div class="c-public-transport-information__stops">
+                            <p>
+                                <strong>88, 94, 102</strong> - Спирка “ПК Диана” (1342) (на 10-ина минути от СофтУни)
+                            </p>
+                        </div>
+                        <div class="c-public-transport-information__stops">
+                            <p>
+                                <strong>88, 280, 294</strong> - Спирка “СБАЛ по онкология” (0764) (на кръстовището на бул. Г. М. Димитров
+                                и бул. Драган Цанков)
+                            </p>
+                        </div>
+                        <div class="c-public-transport-information__stops">
+                            <p>
+                                <strong>123, 69, 70, 88, 67, 413</strong> - Спирка “СБАЛ по онкология” (2542) (на кръстовището на бул. Г.
+                                М. Димитров и бул. Драган Цанков)
+                            </p>
+                        </div>
+
                     </article>
-                    <article class="c-background-map__contacts-card-wroktime">
-                        <h4>Работно време:</h4>
-                        <div class="c-background-map__contacts-card-wroktime-wrapper">
-                        <div class="c-background-map__contacts-card-wroktime-wrapper--time">
-                            <p>9:00 - 19:30</p>
+                    <article class="c-public-transport-information">
+                        <div class="c-public-transport-information__title">
+                            <span class="h3-likes">Маршрутки</span>
                         </div>
-                        <div class="c-background-map__contacts-card-wroktime-wrapper--day">
-                            <p>Понеделник - Петък</p>
+                        <div class="c-public-transport-information__stops">
+                            <p>
+                                <strong>5</strong> - минава през метростанцията на бул Г. М. Димитров
+                            </p>
                         </div>
-                        <div class="c-background-map__contacts-card-wroktime-wrapper--time">
-                            <p>8:30 - 18:00</p>
+                        <div class="c-public-transport-information__stops">
+                            <p>
+                                <strong>27</strong> - минава през метростанцията на бул Г. М. Димитров
+                            </p>
                         </div>
-                        <div class="c-background-map__contacts-card-wroktime-wrapper--day">
-                            <p>Събота и Неделя</p>
-                        </div>
-                        </div>
-                    </article>
-                    <article class="c-background-map__contacts-card-button">
-                        <button class="c-btn c-btn--middle">намери ни на картата</button>
+
                     </article>
                 </div>
             </div>
-            </div>
-           
-        </section>
-        <section class="c-contact-form">
-        
+
         </section>
 
     </main>
