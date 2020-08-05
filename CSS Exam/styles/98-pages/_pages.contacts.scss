@@ -1,0 +1,78 @@
+.c-background-map {
+    height: 425px;
+    width: 1440px;
+    &__image {
+        display: flex;
+        position: relative;
+        height: 425px;
+        background-image: url(../../assets/images/Map.png);
+        width: 100%;
+       
+        img {
+            display: inline-flex;
+            margin: 0 auto;
+        }
+    }
+
+    &__contacts-card {
+
+        display: grid;
+        grid-template-columns: 0.8fr 1fr;
+        grid-template-rows: 150px 1fr 76px;
+        column-gap: 30px;
+        grid-template-areas:
+        'address worktime'
+        'contacts .'
+        'button button';
+        background-color: $backgroud-white;
+        position: absolute;
+        top: 202px;
+        left: 95px;
+        width: 519px;
+        height: 382px;
+        border-radius: 12px;
+        padding: 32px;
+        @include BoxShadow(1);
+        z-index: 1;
+        h4 {
+            margin: 0;
+            padding: 0;
+            color: $primary-300;
+            font-weight: 600;
+        }
+
+        
+        &-address {
+            grid-area: address;
+        }
+        &-contacts {
+            grid-area: contacts;
+        }
+        &-worktime {
+            grid-area: worktime;
+        }
+        &-button {
+            display: block;
+            position: relative;
+            // left: 30%;
+            margin: 0 auto;
+            grid-area: button;
+            align-self: center;
+        }
+
+        &-wroktime-wrapper {
+            display: grid;
+            grid-template-rows: auto auto;
+            grid-template-columns: 100px auto;
+            column-gap: 20px;
+            &--time {
+                color: $secondary-800;
+            }
+        }
+        
+    }
+}
+
+.c-contact-form {
+    min-height: 686px;
+}

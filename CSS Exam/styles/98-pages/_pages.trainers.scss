@@ -3,9 +3,13 @@
     position: relative;
     background-color: $secondary-600;
     color: $backgroud-white;
+    border: 1px solid $secondary-600;
 
     &__heading {
-        h1,
+        .h1-likes {
+                font-weight: 600;
+        }
+
         p {
             padding: 0;
             margin: 0;

@@ -5,111 +5,6 @@
 /* ======================================
 Custom Color Palette
    ====================================== */
-/* ==========================================================================
-   #TYPOGRAPHY
-   ========================================================================== */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@font-face {
-  font-family: 'Lato';
-  src: local("Lato Regular"), local("Lato-Regular"), url("../../fonts/lato/latoregular.woff2") format("woff2"), url("../../fonts/lato/latoregular.woff") format("woff"), url("../../fonts/lato/latoregular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Lato';
-  src: local("Lato Medium"), local("Lato-Medium"), url("./../fonts/lato/latomedium.woff2") format("woff2"), url("./../fonts/lato/latomedium.woff") format("woff"), url("./../fonts/lato/latomedium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Lato';
-  src: local("Lato Semibold"), local("Lato-Semibold"), url("./../fonts/lato/latosemibold.woff2") format("woff2"), url("./../fonts/lato/latosemibold.woff") format("woff"), url("./../fonts/lato/latosemibold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Lato';
-  src: local("Lato Bold"), local("Lato-Bold"), url("./../fonts/lato/latobold.woff2") format("woff2"), url("./../fonts/lato/latobold.woff") format("woff"), url("./../fonts/lato/latobold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
-
-html,
-* {
-  font-family: 'Lato', sans-serif;
-}
-
-a,
-button {
-  font-style: normal;
-  font-size: 13px;
-  line-height: 16px;
-}
-
-a {
-  font-weight: 600;
-}
-
-p {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-}
-
-button {
-  font-weight: 800;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Montserrat", sans-serif;
-}
-
-h1, .h1-likes {
-  font-family: "Montserrat", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 44px;
-}
-
-h2, .h2-likes {
-  font-family: "Montserrat", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-}
-
-h3, .h3-likes {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 30px;
-}
-
-h4, .h4-likes {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-}
-
-h5, .h5-likes {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
-}
-
 /* 02. Tools */
 /* 03. Generic */
 /*! modern-normalize v0.7.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -120,6 +15,7 @@ Document
 /**
 Use a better box model (opinionated).
 */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 *,
 *::before,
 *::after {
@@ -156,12 +52,12 @@ Remove the margin in all browsers.
 */
 body {
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   font-family: "Lato", sans-serif;
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
-  max-width: 100vw;
+  max-width: 1440px;
 }
 
 /**
@@ -369,6 +265,110 @@ select {
   background: #FFFFFF;
 }
 
+/* ==========================================================================
+   #TYPOGRAPHY
+   ========================================================================== */
+@font-face {
+  font-family: 'Lato';
+  src: local("Lato Regular"), local("Lato-Regular"), url("../../fonts/lato/latoregular.woff2") format("woff2"), url("../../fonts/lato/latoregular.woff") format("woff"), url("../../fonts/lato/latoregular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: local("Lato Medium"), local("Lato-Medium"), url("./../fonts/lato/latomedium.woff2") format("woff2"), url("./../fonts/lato/latomedium.woff") format("woff"), url("./../fonts/lato/latomedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: local("Lato Semibold"), local("Lato-Semibold"), url("./../fonts/lato/latosemibold.woff2") format("woff2"), url("./../fonts/lato/latosemibold.woff") format("woff"), url("./../fonts/lato/latosemibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: local("Lato Bold"), local("Lato-Bold"), url("./../fonts/lato/latobold.woff2") format("woff2"), url("./../fonts/lato/latobold.woff") format("woff"), url("./../fonts/lato/latobold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+html,
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+a,
+button {
+  font-style: normal;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+a {
+  font-weight: 600;
+}
+
+p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+button {
+  font-weight: 800;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1, .h1-likes {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+}
+
+h2, .h2-likes {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+h3, .h3-likes {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+h4, .h4-likes {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+h5, .h5-likes {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+
 /* 05. Objects */
 /* ==========================================================================
    #CONTAINER-OBJECT
@@ -420,8 +420,8 @@ select {
 
 .c-btn:hover {
   cursor: pointer;
-  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .c-btn--secondary {
@@ -445,6 +445,21 @@ select {
   line-height: 20px;
   font-weight: 400;
   padding: 16px 94px;
+}
+
+.c-btn--middle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #fff;
+  color: #ff9100;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 14px 32px;
+  border: 1px solid #ff9100;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .c-navigation {
@@ -690,6 +705,7 @@ select {
   background-color: #66B9F8;
   border-top: 12px solid #92CDFB;
   color: #FFFFFF;
+  padding: 64px 0;
 }
 
 .c-registration .h3-likes {
@@ -701,6 +717,15 @@ select {
   display: grid;
   -ms-grid-rows: auto auto;
       grid-template-rows: auto auto;
+  row-gap: 48px;
+}
+
+.c-registration__application-form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto auto auto;
+      grid-template-rows: auto auto auto auto;
+  row-gap: 36px;
 }
 
 .c-registration__application-form-input {
@@ -713,22 +738,42 @@ select {
 
 .c-registration__application-form-input::-webkit-input-placeholder {
   color: #FFFFFF;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: "Lato", sans-serif;
   opacity: 1;
 }
 
 .c-registration__application-form-input:-ms-input-placeholder {
   color: #FFFFFF;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: "Lato", sans-serif;
   opacity: 1;
 }
 
 .c-registration__application-form-input::-ms-input-placeholder {
   color: #FFFFFF;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: "Lato", sans-serif;
   opacity: 1;
 }
 
 .c-registration__application-form-input::placeholder {
   color: #FFFFFF;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: "Lato", sans-serif;
   opacity: 1;
+}
+
+#input--button {
+  margin-top: 36px;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .c-footer {
@@ -888,7 +933,7 @@ select {
           align-items: center;
   text-align: center;
   margin: 0 auto;
-  max-width: 335px;
+  min-width: 335px;
 }
 
 .c-footer-navbar-element .c-footer-navbar-element__company-info p {
@@ -931,6 +976,7 @@ select {
   min-height: 302px;
   background-color: #44a9f8;
   color: #FFFFFF;
+  border: 1px solid #44a9f8;
 }
 
 .c-main-title .o-page-wrapper {
@@ -972,8 +1018,8 @@ select {
   min-height: 22px;
   text-align: center;
   border-radius: 4px;
-  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .c-main-title .o-page-wrapper .c-main-title__label p {
@@ -1000,8 +1046,8 @@ select {
   min-width: 335px;
   min-height: 562px;
   background-color: #FFFFFF;
-  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
   z-index: 1;
 }
@@ -1174,8 +1220,8 @@ select {
   bottom: -64px;
   border-bottom: 10px dotted #FFFFFF;
   height: 10px;
-  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
   z-index: -1;
 }
 
@@ -1239,6 +1285,7 @@ select {
   position: relative;
   background-color: #FFB402;
   color: #FFFFFF;
+  border: 1px solid #FFB402;
 }
 
 .c-main-trainers__heading {
@@ -1259,7 +1306,10 @@ select {
           justify-content: center;
 }
 
-.c-main-trainers__heading h1,
+.c-main-trainers__heading .h1-likes {
+  font-weight: 600;
+}
+
 .c-main-trainers__heading p {
   padding: 0;
   margin: 0;
@@ -1389,5 +1439,107 @@ select {
 
 .c-main-trainers__team-column-four {
   display: none;
+}
+
+.c-background-map {
+  height: 425px;
+  width: 1440px;
+}
+
+.c-background-map__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  height: 425px;
+  background-image: url(../../assets/images/Map.png);
+  width: 100%;
+}
+
+.c-background-map__image img {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0 auto;
+}
+
+.c-background-map__contacts-card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.8fr 1fr;
+      grid-template-columns: 0.8fr 1fr;
+  -ms-grid-rows: 150px 1fr 76px;
+      grid-template-rows: 150px 1fr 76px;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+      grid-template-areas: 'address worktime' 'contacts .' 'button button';
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 202px;
+  left: 95px;
+  width: 519px;
+  height: 382px;
+  border-radius: 12px;
+  padding: 32px;
+  -webkit-box-shadow: 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.c-background-map__contacts-card h4 {
+  margin: 0;
+  padding: 0;
+  color: #41bead;
+  font-weight: 600;
+}
+
+.c-background-map__contacts-card-address {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: address;
+}
+
+.c-background-map__contacts-card-contacts {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: contacts;
+}
+
+.c-background-map__contacts-card-worktime {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: worktime;
+}
+
+.c-background-map__contacts-card-button {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: button;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.c-background-map__contacts-card-wroktime-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  -ms-grid-columns: 100px auto;
+      grid-template-columns: 100px auto;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.c-background-map__contacts-card-wroktime-wrapper--time {
+  color: #ff9100;
+}
+
+.c-contact-form {
+  min-height: 686px;
 }
 /*# sourceMappingURL=main.css.map */

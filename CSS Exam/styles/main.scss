@@ -3,7 +3,6 @@
 
 /* 01. Settings */
 @import "./01-settings/_settings.colors";
-@import "./01-settings/_settings.typography";
 
 /* 02. Tools */
 @import "./02-tools/_tools.shadows";
@@ -13,6 +12,7 @@
 
 /* 04. Elements */
 @import "./04-elements/_elements.imput-fields";
+@import "./04-elements/_elements.typography";
 
 /* 05. Objects */
 @import "./05-objects/objects.container";
@@ -29,3 +29,4 @@
 /* 98. Pages */
 @import "./98-pages/_pages.course";
 @import "./98-pages/_pages.trainers";
+@import "./98-pages/_pages.contacts"

@@ -3,16 +3,21 @@
     background-color: $blue-300;
     border-top: 12px solid $blue-200;
     color: $backgroud-white;
+    padding: 64px 0;
+
     .h3-likes {
         font-family: "Montserat", sans-serif;
     }
     .o-page-wrapper {
         display: grid;
         grid-template-rows: auto auto;
+        row-gap: 48px;
     }
-    
-    
+
     &__application-form {
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        row-gap: 36px;
         &-input {
             background-color: $blue-300;
             border: 1px solid $backgroud-white;
@@ -22,8 +27,17 @@
 
             &::placeholder {
                 color: $backgroud-white;
+                font-size: 16px;
+                line-height: 19px;
+                font-family: "Lato", sans-serif;
                 opacity: 1;
             }
         }
     }
+}
+
+#input--button {
+    margin-top: 36px;
+    width: 100%;
+    justify-content: center;
 }

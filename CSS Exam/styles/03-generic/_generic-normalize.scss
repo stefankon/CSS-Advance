@@ -47,10 +47,10 @@ Remove the margin in all browsers.
 
 body {
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   font-family: "Lato", sans-serif;
   min-width: fit-content;
-  max-width: 100vw;
+  max-width: 1440px;
 }
 
 /**
