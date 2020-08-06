@@ -7,6 +7,10 @@
     border-top: 12px solid $grey-500;
     position: relative;
 
+    @include for-desktop-up {
+        margin-top: 96px;
+    }
+
     .o-page-wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
