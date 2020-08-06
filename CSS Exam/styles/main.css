@@ -786,8 +786,35 @@ h5, .h5-likes {
   padding: 64px 0;
 }
 
+@media (min-width: 1200px) {
+  .c-registration__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
 .c-registration .h3-likes {
   font-family: "Montserat", sans-serif;
+}
+
+@media (min-width: 1200px) {
+  .c-registration .h3-likes {
+    font-family: "Montserat", sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+  }
 }
 
 .c-registration .o-page-wrapper {
@@ -804,6 +831,20 @@ h5, .h5-likes {
   -ms-grid-rows: auto auto auto auto;
       grid-template-rows: auto auto auto auto;
   row-gap: 36px;
+}
+
+@media (min-width: 1200px) {
+  .c-registration__application-form {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 228px 228px 228px 1fr 1fr;
+        grid-template-columns: 228px 228px 228px 1fr 1fr;
+    -ms-grid-rows: 52px;
+        grid-template-rows: 52px;
+    -webkit-column-gap: 32px;
+            column-gap: 32px;
+    margin-left: 150px;
+  }
 }
 
 .c-registration__application-form-input {
@@ -846,12 +887,16 @@ h5, .h5-likes {
   opacity: 1;
 }
 
-#input--button {
-  margin-top: 36px;
-  width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+@media (max-width: 599px) {
+  #input--button {
+    margin-top: 36px;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
 }
 
 .c-footer {
@@ -1513,6 +1558,15 @@ h5, .h5-likes {
   margin: 0;
 }
 
+@media (min-width: 1200px) {
+  .c-main-trainers__heading {
+    max-width: 850px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+}
+
 .c-main-trainers__heading-text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1534,6 +1588,11 @@ h5, .h5-likes {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 64px;
+  margin-top: 48px;
+}
+
+.c-main-trainers__curriculum .o-page-wrapper {
+  min-width: 375px;
 }
 
 .c-main-trainers__curriculum-grid {
@@ -1541,16 +1600,34 @@ h5, .h5-likes {
   display: grid;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-  border-bottom: 10px dotted #dff4f1;
-  margin-top: 48px;
+  row-gap: 128px;
   padding-bottom: 64px;
+  border-bottom: 10px dotted #dff4f1;
+}
+
+@media (min-width: 1200px) {
+  .c-main-trainers__curriculum-grid {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 400px;
+        grid-template-rows: 400px;
+    -webkit-column-gap: 32px;
+            column-gap: 32px;
+    padding-top: 48px;
+  }
 }
 
 .c-main-trainers__curriculum-card {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   row-gap: 32px;
 }
 
@@ -1579,8 +1656,8 @@ h5, .h5-likes {
 .c-main-trainers__curriculum-card__info {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
   row-gap: 8px;
 }
 
@@ -1615,6 +1692,87 @@ h5, .h5-likes {
   color: #565656;
 }
 
+.c-main-trainers__curriculum-card--wide {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 188px 400px;
+      grid-template-rows: 188px 400px;
+  justify-items: center;
+  row-gap: 32px;
+}
+
+@media (min-width: 1200px) {
+  .c-main-trainers__curriculum-card--wide {
+    -ms-grid-columns: 247px 1fr;
+        grid-template-columns: 247px 1fr;
+    -ms-grid-rows: 360px;
+        grid-template-rows: 360px;
+  }
+}
+
+.c-main-trainers__curriculum-card--wide__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  max-width: 188px;
+}
+
+.c-main-trainers__curriculum-card--wide__image-wrapper {
+  width: 188px;
+  height: 188px;
+  border-radius: 50%;
+  border: 8px solid #41bead;
+  overflow: hidden;
+}
+
+.c-main-trainers__curriculum-card--wide__info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 360px;
+      grid-template-rows: 1fr 360px;
+  row-gap: 8px;
+  -ms-grid-row-align: start;
+      align-self: start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.c-main-trainers__curriculum-card--wide__info-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+.c-main-trainers__curriculum-card--wide__info-title h4 {
+  color: #41bead;
+  margin: 0;
+}
+
+.c-main-trainers__curriculum-card--wide__info-title p {
+  font-size: 14px;
+  line-height: 16px;
+  color: #B2B2B2;
+  margin: 0;
+  padding-top: 8px;
+}
+
+.c-main-trainers__curriculum-card--wide__info-text {
+  color: #565656;
+}
+
 .c-main-trainers__team {
   display: -ms-grid;
   display: grid;
@@ -1627,16 +1785,52 @@ h5, .h5-likes {
   row-gap: 24px;
 }
 
+@media (min-width: 1200px) {
+  .c-main-trainers__team .o-page-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+  }
+}
+
+.c-main-trainers__team-column-one {
+  display: -ms-grid;
+  display: grid;
+}
+
 .c-main-trainers__team-column-two {
   display: none;
+}
+
+@media (min-width: 1200px) {
+  .c-main-trainers__team-column-two {
+    display: -ms-grid;
+    display: grid;
+  }
 }
 
 .c-main-trainers__team-column-three {
   display: none;
 }
 
+@media (min-width: 1200px) {
+  .c-main-trainers__team-column-three {
+    display: -ms-grid;
+    display: grid;
+  }
+}
+
 .c-main-trainers__team-column-four {
   display: none;
+}
+
+@media (min-width: 1200px) {
+  .c-main-trainers__team-column-four {
+    display: -ms-grid;
+    display: grid;
+  }
 }
 
 .c-background-map {
