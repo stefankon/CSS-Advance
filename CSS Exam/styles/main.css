@@ -5,6 +5,9 @@
 /* ======================================
 Custom Color Palette
    ====================================== */
+/* ==========================================================================
+   #BREAKPOINTS
+   ========================================================================== */
 /* 02. Tools */
 /* 03. Generic */
 /*! modern-normalize v0.7.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -467,15 +470,29 @@ h5, .h5-likes {
 }
 
 .c-navigation__hidden-menu {
-  visibility: hidden;
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .c-navigation__hidden-menu {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 200px;
+        grid-template-columns: 200px;
+    position: relative;
+  }
 }
 
 .c-navigation__hidden-menu--show {
-  visibility: visible;
+  display: block;
 }
 
 .c-navigation__header {
-  display: block;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 1px;
   position: absolute;
   top: 55px;
   padding: 35px 20px;
@@ -486,8 +503,35 @@ h5, .h5-likes {
           box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.c-navigation__header:hover {
-  background-color: #f8f8f8;
+@media (min-width: 1200px) {
+  .c-navigation__header {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -webkit-column-gap: 24px;
+            column-gap: 24px;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background-color: #FFFFFF;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }
 
 .c-navigation__item {
@@ -521,6 +565,12 @@ h5, .h5-likes {
           column-gap: 24px;
 }
 
+@media (min-width: 1200px) {
+  .c-navigation__sadwich-menu--wrapper {
+    display: none;
+  }
+}
+
 .c-header {
   display: block;
   position: relative;
@@ -532,11 +582,19 @@ h5, .h5-likes {
 .c-header .o-page-wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 150px;
+      grid-template-columns: 1fr 1fr 150px;
   min-height: 75px;
   -ms-flex-line-pack: center;
       align-content: center;
+  justify-items: start;
+}
+
+.c-header-navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center;
 }
 
 .c-logo {
@@ -570,6 +628,12 @@ h5, .h5-likes {
   line-height: 22px;
 }
 
+@media (min-width: 1200px) {
+  .c-logo__arrow--text {
+    color: #ff9100;
+  }
+}
+
 .c-logo__vertical {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -580,12 +644,26 @@ h5, .h5-likes {
           align-items: center;
 }
 
+@media (min-width: 1200px) {
+  .c-logo__vertical {
+    display: none;
+  }
+}
+
 .c-logo__horizontal {
   display: none;
   justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (min-width: 1200px) {
+  .c-logo__horizontal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .c-main-introduction .o-page-wrapper {
@@ -796,6 +874,15 @@ h5, .h5-likes {
   width: 100%;
 }
 
+@media (min-width: 1200px) {
+  .c-footer .o-page-wrapper {
+        grid-template-areas: "logo one two three four";
+    -webkit-column-gap: 78px;
+            column-gap: 78px;
+    height: 100%;
+  }
+}
+
 .c-footer-navbar-comtainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -831,12 +918,30 @@ h5, .h5-likes {
 }
 
 .c-footer-navbar-element--info-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   border-top: 1px solid #676781;
   margin: 32px 20px;
 }
 
-.c-footer-navbar-element--desctop {
+@media (min-width: 1200px) {
+  .c-footer-navbar-element--info-wrapper {
+    border: none;
+  }
+}
+
+.c-footer-navbar-element--desktop {
   display: none;
+}
+
+@media (min-width: 1200px) {
+  .c-footer-navbar-element--desktop {
+    display: -ms-grid;
+    display: grid;
+    row-gap: 10px;
+    padding-bottom: 40px;
+  }
 }
 
 .c-footer-navbar-element .c-footer-navbar__items {
@@ -853,6 +958,19 @@ h5, .h5-likes {
   text-decoration: none;
 }
 
+@media (min-width: 1200px) {
+  .c-footer-navbar-element .c-footer-navbar__items--double {
+    display: -ms-grid;
+    display: grid;
+    -webkit-column-gap: 24px;
+            column-gap: 24px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+        grid-template-areas: "col-1 col-6" "col-2 col-7" "col-3 . " "col-4 . " "col-5 . ";
+  }
+}
+
 .c-footer-navbar-element .c-footer-navbar__items .c-footer-navbar__item-content {
   padding: 6px 0;
 }
@@ -867,6 +985,38 @@ h5, .h5-likes {
 
 .c-footer-navbar-element .c-footer-navbar__items .c-footer-navbar__item-content a:hover {
   color: #41bead;
+}
+
+.c-footer-navbar-element .c-footer-navbar__items .c-footer-navbar__item-content--col-1 {
+  grid-area: col-1;
+}
+
+.c-footer-navbar-element .c-footer-navbar__items .c-footer-navbar__item-content--col-2 {
+  grid-area: col-2;
+}
+
+.c-footer-navbar-element .c-footer-navbar__items .c-footer-navbar__item-content--col-3 {
+  grid-area: col-3;
+}
+
+.c-footer-navbar-element .c-footer-navbar__items .c-footer-navbar__item-content--col-4 {
+  grid-area: col-4;
+}
+
+.c-footer-navbar-element .c-footer-navbar__items .c-footer-navbar__item-content--col-5 {
+  grid-area: col-5;
+}
+
+.c-footer-navbar-element .c-footer-navbar__items .c-footer-navbar__item-content--col-6 {
+  grid-area: col-6;
+}
+
+.c-footer-navbar-element .c-footer-navbar__items .c-footer-navbar__item-content--col-7 {
+  grid-area: col-7;
+}
+
+.c-footer-navbar-element .c-footer-navbar__items .c-footer-navbar__item-content--second-col {
+  grid-area: second;
 }
 
 .c-footer-navbar-element .c-footer-navbar-element__find-us {
@@ -909,6 +1059,12 @@ h5, .h5-likes {
   padding-top: 20px;
 }
 
+@media (min-width: 1200px) {
+  .c-footer-navbar-element .c-footer-navbar-element__social-wrapper--mobile {
+    display: none;
+  }
+}
+
 .c-footer-navbar-element .c-footer-navbar-element__social-wrapper--mobile .c-footer-navbar__social-icon {
   margin-right: 24px;
 }
@@ -942,6 +1098,47 @@ h5, .h5-likes {
   color: #919191;
 }
 
+@media (min-width: 1200px) {
+  .c-footer-navbar-element .c-footer-navbar-element__company-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    min-width: 177px;
+  }
+}
+
+.c-footer-section__logo {
+  grid-area: logo;
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .c-footer-section__logo {
+    display: block;
+    position: relative;
+    left: 0px;
+    bottom: 0;
+    height: 260px;
+  }
+}
+
+.c-footer-section__logo-img {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .c-footer-section__logo-img {
+    display: block;
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+  }
+}
+
 .c-footer-section__one {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -966,6 +1163,7 @@ h5, .h5-likes {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: four;
+  max-width: 177px;
 }
 
 /* 98. Pages */
@@ -1033,6 +1231,7 @@ h5, .h5-likes {
   text-align: center;
   text-transform: none;
   padding: 0 20px;
+  max-width: 644px;
 }
 
 .c-main-dotted-card {
@@ -1553,9 +1752,8 @@ h5, .h5-likes {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding-bottom: 96px;
+  padding-top: 180px;
 }
 
 .c-contact-form .h2-likes {

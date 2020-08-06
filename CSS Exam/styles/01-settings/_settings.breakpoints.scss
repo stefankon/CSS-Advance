@@ -1,25 +1,33 @@
 /* ==========================================================================
-   #BREAKPOINTS-VARIABLES
+   #BREAKPOINTS
    ========================================================================== */
 
-$bkp-mobile: 320px;
-$bkp-phablet: 640px;
-$bkp-tablet: 768px;
-$bkp-desktop: 980px;
-$bkp-wide: 1280px;
-$bkp-hd: 1920px;
+   @mixin for-phone-only {
+    @media (max-width: 599px) {
+        @content;
+    }
+}
 
-$breakpoints: (
-  mobile: $bkp-mobile,
-  phablet: $bkp-phablet,
-  tablet: $bkp-tablet,
-  desktop: $bkp-desktop,
-  wide: $bkp-wide,
-  hd: $bkp-hd
-);
+@mixin for-tablet-portrait-up {
+    @media (min-width: 600px) {
+        @content;
+    }
+}
 
-/**
- * Breakpoints needed for sass-mq mixin
- */
+@mixin for-tablet-landscape-up {
+    @media (min-width: 900px) {
+        @content;
+    }
+}
 
-$mq-breakpoints: $breakpoints !default;
+@mixin for-desktop-up {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin for-big-desktop-up {
+    @media (min-width: 1800px) {
+        @content;
+    }
+}

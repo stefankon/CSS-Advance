@@ -80,7 +80,9 @@
     display: flex;
     min-height: 686px;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
+    padding-bottom: 96px;
+    padding-top: 180px;
 
     .h2-likes {
         color: $primary-300;
