@@ -52,16 +52,13 @@
     min-width: 335px;
     min-height: 562px;
     background-color: $backgroud-white;
+    padding-bottom: 20px;
     @include BoxShadow(1);
     border-radius: 12px;
     z-index: 1;
 
     @include for-desktop-up {
-        display: grid;
-        position: relative;
-        grid-template-columns: 290px 14px 1fr;
-        grid-template-rows: none;
-        height: 112px;
+        display: none;
     }
 
     &__button {
@@ -74,10 +71,6 @@
         border-top-right-radius: 12px;
         background-color: $backgroud-white;
         z-index: 2;
-        @include for-desktop-up {
-         
-        }
-
     }
     &__dots {
         display: grid;
@@ -85,9 +78,6 @@
         column-gap: 5px;
         position: relative;
         z-index: 3;
-        @include for-desktop-up {
-            grid-template-rows: 10px 1fr 5px;
-        }
 
         &--start {
             display: flex;
@@ -127,9 +117,85 @@
         display: grid;
         position: relative;
         @include for-desktop-up {
-         grid-template-columns: 1fr 20px 1fr 20px 1fr 20px 1fr;
+            grid-template-columns: 1fr 20px 1fr 20px 1fr 20px 1fr;
+            //  padding-bottom: 20px;
+        }
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: 80px 1fr;
+
+        &-pic {
+            display: flex;
+            justify-content: center;
         }
 
+        &-content {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+
+            &--one {
+                display: flex;
+                align-self: flex-end;
+                font-family: Lato;
+                padding-bottom: 6px;
+            }
+            &--two {
+                margin: 0;
+                padding: 0;
+                color: $secondary-800;
+            }
+        }
+    }
+
+    &__separator {
+        height: 2px;
+        width: 24px;
+        background-color: $grey-100;
+        margin-top: 24px;
+        margin-left: 24px;
+    }
+}
+
+.c-main-dotted-card--desktop {
+    display: none;
+    grid-template-columns: 291px 14px 1fr;
+    grid-template-rows: 112px;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    left: 0;
+    top: -65px;
+    min-width: 335px;
+    background-color: $backgroud-white;
+    @include BoxShadow(1);
+    border-radius: 12px;
+    z-index: 1;
+
+    @include for-desktop-up {
+        display: grid;
+    }
+
+    &__button {
+        display: flex;
+        // justify-content: center;
+        // align-items: center;
+        position: relative;
+        width: 100%;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        background-color: $backgroud-white;
+        z-index: 2;
+    }
+
+    &__content {
+        display: grid;
+        position: relative;
+        @include for-desktop-up {
+            grid-template-columns: 1fr 20px 1fr 20px 1fr 20px 1fr;
+            //  padding-bottom: 20px;
+        }
     }
 
     &__item {
@@ -195,15 +261,16 @@
 
     &__video {
         display: flex;
-        // background-image: url(../../assets/images/video-clip.svg);
+        background-image: url(../../assets/images/video-clip.svg);
         content: "";
         background-repeat: no-repeat;
-        background-size: auto;
+        background-size: cover;
         border-radius: 12px;
-        min-width: 350px;
+        min-width: 335px;
         max-width: 440px;
         width: 100%;
-        min-height: 190px;
+        height: 100%;
+        min-height: 210px;
         max-height: 248px;
         height: 100%;
         @include BoxShadow(cust-01);
@@ -211,27 +278,38 @@
 }
 
 .c-main-info {
+    padding: 0;
     .o-page-wrapper {
+        display: grid;
+        grid-template-rows: 1fr 10px 1fr;
+        row-gap: 32px;
         @include for-desktop-up {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            // column-gap: 250px;
+            grid-template-columns: 1fr 10px 1fr;
             grid-template-rows: 1fr;
+            column-gap: 32px;
         }
+    }
+
+    .h2-likes {
+        font-weight: 600;
     }
 
     &__card--dotted-dorder-primary-100 {
         border-bottom: 10px dotted $secondary-100;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+
         @include for-desktop-up {
             border-bottom: none;
             border-right: 10px dotted $secondary-100;
-            padding-right: 100px;
-            margin-right: 100px;
+            width: 100%;
         }
     }
 
-    &__card {
-        @include for-desktop-up {
+    @include for-desktop-up {
+        p {
+            padding-left: 50px;
         }
     }
 
@@ -240,25 +318,59 @@
         font-size: 16px;
         line-height: 20px;
     }
-}
 
+    &__card--certificte {
+        background-color: $grey-300;
+        width: 363px;
+        height: 256px;
+        border-radius: 12px;
+        margin: 0 auto;
+        @include BoxShadow(1);
+        text-align: center;
+        .p-likes {
+            position: relative;
+            top: 116px;
+        }
+    }
+
+    &__end-separator {
+        display: none;
+        margin-bottom: 148px;
+        @include for-desktop-up {
+            display: flex;
+        }
+    }
+}
+.c-main-certificate {
+    .o-page-wrapper {
+        grid-template-columns: 1fr 100px 1fr;
+        align-items: center;
+        column-gap: 0;
+    }
+
+    display: none;
+    @include for-desktop-up {
+        display: flex;
+    }
+}
 .c-main-program {
     background-color: $secondary-400;
     min-height: 554px;
     color: $grey-700;
     padding: 64px 0;
+    margin-bottom: 100px;
     @include for-desktop-up {
         margin-top: 60px;
     }
 
-&__card {
-    @include for-desktop-up {
-       display: grid;
-       grid-template-columns: 1fr 352px;
-       column-gap: 137px;
-       align-items: center;
+    &__card {
+        @include for-desktop-up {
+            display: grid;
+            grid-template-columns: 1fr 352px;
+            column-gap: 137px;
+            align-items: center;
+        }
     }
-}
 
     &--top-boreder {
         display: flex;
@@ -300,6 +412,7 @@
             font-weight: 700;
             font-size: 18px;
             line-height: 22px;
+            font-family: "Lato", sans-serif;
 
             &:hover {
                 cursor: pointer;
@@ -324,13 +437,19 @@
 
         &--stretch {
             display: flex;
+            font-family: "Lato", sans-serif;
             font-weight: 700;
             font-size: 18px;
+            padding-right: 60px;
             line-height: 22px;
             position: absolute;
             top: 220px;
             left: 14px;
             z-index: 2;
+
+            @include for-desktop-up {
+                padding-top: 10px;
+            }
         }
     }
 }
@@ -339,5 +458,52 @@
     display: none;
     @include for-desktop-up {
         display: flex;
+    }
+}
+.c-main-dotted-card__dots--desktop {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 7px;
+    height: 100%;
+    position: relative;
+    // background-color: indigo;
+
+    &-blue-start {
+        position: relative;
+        width: 12px;
+        height: 6px;
+        background-image: url("../../assets/images/blue-start.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &-white-end {
+        width: 12px;
+        height: 6px;
+        background-image: url("../../assets/images/white-end.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    &-blue {
+        width: 12px;
+        height: 12px;
+        background-image: url("../../assets/images/blue.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &-middle {
+        width: 12px;
+        height: 12px;
+        background-image: url("../../assets/images/middle.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    &-white {
+        width: 12px;
+        height: 12px;
+        background-image: url("../../assets/images/white.png");
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 }

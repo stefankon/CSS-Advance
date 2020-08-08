@@ -1,0 +1,7 @@
+GitHub Link
+
+https://github.com/stefankon/CSS-Advanced.git
+
+Някои елементи се зареждат само от Live Server - VSC
+
+Прилагам и zip на фаловете.
