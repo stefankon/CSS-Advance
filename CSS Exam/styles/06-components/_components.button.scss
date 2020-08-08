@@ -5,6 +5,10 @@
     outline: none;
     padding: 10px 22px;
     text-transform: uppercase;
+
+    &--empty {
+        border: none;
+    }
 }
 
 .c-btn:hover {

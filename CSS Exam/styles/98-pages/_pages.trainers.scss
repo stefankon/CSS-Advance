@@ -44,8 +44,6 @@
         margin-top: 48px;
         .o-page-wrapper {
             min-width: 375px;
-       
-
         }
 
         &-grid {
@@ -60,9 +58,6 @@
                 grid-template-rows: 400px;
                 column-gap: 32px;
                 padding-top: 48px;
-                // padding-bottom: 64px;
-                // max-height: fit-content;
-                // justify-self: start;
             }
         }
 
@@ -78,7 +73,14 @@
                 flex-flow: column wrap;
                 align-items: center;
                 justify-items: center;
-                // max-width: 188px;
+
+                &-wrapper-title {
+                    width: 188px;
+                    height: 188px;
+                    border-radius: 50%;
+                    border: 8px solid $primary-300;
+                    overflow: hidden;
+                }
 
                 &-wrapper {
                     width: 188px;
@@ -86,6 +88,39 @@
                     border-radius: 50%;
                     border: 8px solid $primary-300;
                     overflow: hidden;
+                    transition: 0.5s ease-in-out;
+
+                    &:hover {
+                        opacity: 0.2;
+                        cursor: pointer;
+                    }
+
+                    &--background-primary-800 {
+                        display: grid;
+                        grid-template-rows: 64px 20px;
+                        row-gap: 12px;
+                        align-content: center;
+                        align-items: center;
+                        text-align: center;
+                        position: absolute;
+                        width: 188px;
+                        height: 188px;
+                        border-radius: 50%;
+                        border: 8px solid $primary-300;
+                        background-color: $secondary-800;
+                        color: $backgroud-white;
+                        z-index: -1;
+                        .fa-info {
+                            font-size: 64px;
+                        }
+                        .p-likes {
+                            font-weight: 700;
+                            font-size: 10px;
+                            line-height: 12px;
+                            text-transform: uppercase;
+
+                        }
+                    }
                 }
             }
 

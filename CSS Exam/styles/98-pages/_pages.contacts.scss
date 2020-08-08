@@ -1,6 +1,7 @@
 .c-background-map {
     height: 425px;
     width: 1440px;
+    position: relative;
     &__image {
         display: flex;
         position: relative;
@@ -34,7 +35,7 @@
         border-radius: 12px;
         padding: 32px;
         @include BoxShadow(1);
-        z-index: 1;
+        z-index: 2;
         h4 {
             margin: 0;
             padding: 0;
@@ -58,7 +59,7 @@
             margin: 0 auto;
             grid-area: button;
             align-self: center;
-            z-index: 2;
+            z-index: 3;
             &:hover {
                 cursor: pointer;
             }
@@ -77,12 +78,16 @@
 }
 
 .c-contact-form {
+   
     display: flex;
-    min-height: 686px;
+    min-height: fit-content;
     justify-content: center;
+    position: relative;
     // align-items: center;
-    padding-bottom: 96px;
-    padding-top: 180px;
+    // padding-bottom: 96px;
+    margin-top: 180px;   
+    margin-bottom: 96px;
+    // z-index: 1;
 
     .h2-likes {
         color: $primary-300;
@@ -120,8 +125,14 @@
                 width: 100%;
                 resize: none;
 
+                transition: 0.5s ease-in-out;
+
                 &::placeholder {
                     color: $grey-500;
+                }
+
+                &:hover {
+                    background-color: $blue-50;
                 }
             }
         }
@@ -149,15 +160,17 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 33px;
+
+        
     }
 }
 
-#find-us {
-    display: flex;
-    position: relative;
-    z-index: 5;
-&:hover::before {
-    cursor: pointer !important;
-}
+// #find-us {
+//     display: flex;
+//     position: relative;
+//     z-index: 5;
+// &:hover::before {
+//     cursor: pointer !important;
+// }
     
-}
+// }
